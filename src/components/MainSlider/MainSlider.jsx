@@ -27,25 +27,23 @@ export default function MainSlider(){
 
     return<>
 
-    <div className="flex mb-4 ">
+    <div className="flex mb-4 container">
 
-    <div className="w-3/4 flex-col  lg:flex-row">
+    <div className="flex-col  lg:flex-row lg:w-[75%] w-[100%] rounded-[25px] lg:mr-[25px] ">
     <Slider {...settings}>
-
-
     
-    <img  className="w-full h-[500px]" src={mainSlid}  />
-    <img  className="w-full h-[500px]" src={mainSlid1}  />
-    <img  className="w-full h-[500px]" src={mainSlid2}  />
-    <img  className="w-full h-[500px]" src={mainSlid3}  />
+    <img  className="w-full rounded-[18px] h-[500px]" src={mainSlid}  />
+    <img  className="w-full rounded-[18px] h-[500px]" src={mainSlid1}  />
+    <img  className="w-full rounded-[18px] h-[500px]" src={mainSlid2}  />
+    <img  className="w-full rounded-[18px] h-[500px]" src={mainSlid3}  />
 
 
 </Slider>
 
     </div>
-    <div className="w-1/4  ">
-    <img style={{height:"250px"}} src={slidChild} alt="" />
-    <img style={{height:"250px"}} src={slidChild1} alt="" />
+    <div className="lg:w-[25%] lg:block hidden">
+    <img  className="rounded-[18px]" style={{height:"250px"}} src={slidChild} alt="slide1" />
+    <img className="rounded-[18px]" style={{height:"250px"}} src={slidChild1} alt="slide2" />
     </div>
     </div>
 
