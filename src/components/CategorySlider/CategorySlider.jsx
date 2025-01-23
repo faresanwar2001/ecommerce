@@ -41,18 +41,20 @@ export default function CategorySlider(){
 
     return<>
 
+<div className="lg:block hidden">
       <h3 className="text-gray-700 font-medium">Shop Popular Categories</h3>
       
-    <Slider {...settings}  className="flex flex-col lg:flex-row  ">
+    <Slider {...settings}  className="flex flex-col lg:flex-row container  ">
         
 
-    {categories.map((category)=> <div  key={category.name}>
+    {categories.map((category)=> <div key={category.name}>
         <img style={{height:"200px"}} className="w-full" src={category.image} alt={category?.name} />
         <h4 style={{fontSize:"18PX"}} className="font-normal mt-1 text-gray-700 ">{category?.name}</h4>
         
     </div> )}
     
     </Slider>
+    </div>
    
     </>
 }
