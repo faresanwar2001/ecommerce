@@ -33,8 +33,6 @@ export default function checkOut(){
         if(response?.data?.status === "success"){
             window.location.href=response.data.session.url
         }
-
-       
     }
 
     return<>
@@ -51,7 +49,7 @@ export default function checkOut(){
             {formik.errors.phone }
             </div>:null}
         <label htmlFor="city">City:</label>
-        <input className="form-control shadow-md my-3" onBlur={formik.handleBlur} name="city" onChange={formik.handleChange} value={formik.values.city} className="form-control shadow-md my-3" type="text" id="city"  />
+        <input className="form-control shadow-md my-3" onBlur={formik.handleBlur} name="city" onChange={formik.handleChange} value={formik.values.city}  type="text" id="city"  />
         {formik.errors.city && formik.touched.city?  <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
             {formik.errors.city }
             </div>:null}
