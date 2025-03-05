@@ -1,28 +1,20 @@
-import { useEffect, useState } from "react"
-import style from "./Layout.module.css"
-import Navbar from "../Navbar/Navbar"
-import { Outlet } from "react-router-dom"
-import Footer from "../Footer/Footer"
+import Navbar from "../Navbar/Navbar";
+import { Outlet } from "react-router-dom";
+import Footer from "../Footer/Footer";
 
+export default function Layout() {
+  return (
+    <>
+      {/* Navbar */}
+      <Navbar />
 
+      {/* Main Content */}
+      <div className="container my-36">
+        <Outlet />
+      </div>
 
-
-export default function Layout(){
-
-
-    return<>
-     <Navbar/>
-     <div className="container my-36">
-
-     <Outlet></Outlet>
-     </div>
-     <Footer/>
-     
-
-     
-     
-        
-
-    
+      {/* Footer */}
+      <Footer />
     </>
+  );
 }

@@ -1,19 +1,11 @@
-import { useEffect, useState } from "react"
-import style from "./ProtectedRoute.module.css"
-import { Navigate } from "react-router-dom"
+import { Navigate } from "react-router-dom";
 
-
-export default function ProtectedRoute(props){
-    // console.log(props);
-    
-
-    if(localStorage.getItem("userToken") !== null){
-        return props.children
-    }
-    else{
-        return <Navigate to={"/login"}/>
-    }
-  
-
-
+export default function ProtectedRoute(props) {
+  // Check if the token is found
+  if (localStorage.getItem("userToken") !== null) {
+    return props.children;
+  } else {
+    // Return login
+    return <Navigate to={"/login"} />;
+  }
 }
