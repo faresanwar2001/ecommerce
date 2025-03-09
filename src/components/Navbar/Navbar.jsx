@@ -21,11 +21,11 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className=" m-auto z-50 static lg:fixed top-0 left-0 right-0 bg-slate-100  ">
-        <div className="m-auto w-3/4">
+      <nav className=" m-auto z-50 static lg:fixed top-0 left-0 right-0  ">
+        <div className="m-auto container py-3">
           <div className="  main flex  lg:flex-col flex-row lg:justify-between lg:items-center items-center ">
             <div className="logo flex flex-row  lg:flex-col ">
-              <img src={logo} alt="logo-img" className="lg:w-[15%] w-[60%]" />
+              <img src={logo} alt="logo-img" className="lg:w-[15%] w-[50%]" />
               <ul className="lg:flex  flex-col lg:flex-row lg:items-center  hidden ">
                 {/* Check if user login found */}
                 {userLogin !== null ? (
@@ -81,21 +81,10 @@ export default function Navbar() {
               <ul className=" flex lg:flex-row lg:items-center items-center ">
                 {userLogin == null ? (
                   <>
-                    {" "}
-                    {/* Register */}
-                    <li className="px-3 py-2">
-                      <Link
-                        className="text-black font-medium"
-                        style={{ textDecoration: "none" }}
-                        to="Register"
-                      >
-                        Register
-                      </Link>
-                    </li>
                     {/* Login */}
                     <li className="px-3 py-2">
                       <Link
-                        className="text-black font-medium"
+                        className=" font-medium bg-green-600 text-white px-4 py-2 rounded-full "
                         style={{ textDecoration: "none" }}
                         to="Login"
                       >
@@ -115,7 +104,7 @@ export default function Navbar() {
 
                     <li onClick={() => logOut()} className="px-3 py-2">
                       <Link
-                        className="text-black text-[16px] lg:font-medium"
+                        className="font-medium bg-green-600 text-white px-4 py-2 rounded-full "
                         style={{ textDecoration: "none" }}
                         to="Login"
                       >
