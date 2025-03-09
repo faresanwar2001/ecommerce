@@ -24,8 +24,8 @@ export default function Navbar() {
       <nav className=" m-auto z-50 static lg:fixed top-0 left-0 right-0 bg-slate-100  ">
         <div className="m-auto w-3/4">
           <div className="  main flex  lg:flex-col flex-row lg:justify-between lg:items-center items-center ">
-            <div className="logo flex flex-row lg:flex-col ">
-              <img src={logo} alt="logo-img" className="lg:w-[15%] w-[50%]" />
+            <div className="logo flex flex-row  lg:flex-col ">
+              <img src={logo} alt="logo-img" className="lg:w-[15%] w-[60%]" />
               <ul className="lg:flex  flex-col lg:flex-row lg:items-center  hidden ">
                 {/* Check if user login found */}
                 {userLogin !== null ? (

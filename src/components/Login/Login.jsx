@@ -1,5 +1,4 @@
-import { useContext, useEffect, useState } from "react";
-import style from "./Login.module.css";
+import { useContext, useState } from "react";
 import { useFormik } from "formik";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
@@ -101,7 +100,7 @@ export default function Login() {
           {/* Label */}
           <label htmlFor="password">Password:</label>
 
-          {/* Passord */}
+          {/* Password */}
           <input
             onBlur={formik.handleBlur}
             name="password"
